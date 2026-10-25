@@ -1,0 +1,129 @@
+.container {
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: system-ui, sans-serif;
+}
+
+.container header {
+  margin-bottom: 24px;
+}
+
+.container header h2 {
+  margin-bottom: 8px;
+}
+
+.container header p {
+  color: var(--color-text-muted, #666);
+}
+
+.container nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.container nav button {
+  padding: 10px 16px;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 8px;
+  background: var(--color-surface, #fff);
+  color: inherit;
+  cursor: pointer;
+}
+
+.container nav button[aria-pressed='true'] {
+  border-color: var(--color-primary, #356ae6);
+  background: var(--color-primary-bg, #eef3ff);
+}
+
+.skeleton {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: var(--color-text-muted, #999);
+  background: linear-gradient(
+    90deg,
+    var(--color-skeleton-start, #e8e8e8) 25%,
+    var(--color-skeleton-end, #f5f5f5) 50%,
+    var(--color-skeleton-start, #e8e8e8) 75%
+  );
+  background-size: 200% 100%;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+.errorAlert {
+  padding: 20px;
+  border: 1px solid var(--color-danger, #c00);
+  border-radius: 8px;
+  background: var(--color-danger-bg, #fee);
+  color: var(--color-danger-text, #900);
+}
+
+.errorAlert p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.errorAlert button {
+  padding: 10px 16px;
+  border: 1px solid var(--color-danger, #c00);
+  border-radius: 6px;
+  background: var(--color-surface, #fff);
+  color: inherit;
+  cursor: pointer;
+}
+
+.errorAlert button:hover {
+  background: var(--color-danger-hover-bg, #fdd);
+}
+
+.telemetryCard {
+  padding: 24px;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 12px;
+  background: var(--color-surface, #fff);
+}
+
+.telemetryCard h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.telemetryCard dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 12px 24px;
+}
+
+.telemetryCard dt {
+  font-weight: bold;
+}
+
+.telemetryCard dd {
+  margin: 0;
+}
